@@ -2,23 +2,20 @@
 import PackageDescription
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'core' (do not edit)
-let remotecoreUrl =
-    "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248055341.zip"
-let remotecoreChecksum = "d9d0df846194d3da63e65cb7d21deca406728d6431b4dc1322f97f3d1b012435"
+let remotecoreUrl = "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248064906.zip"
+let remotecoreChecksum = "c8abb249e865a047e9923c7d277f48fec9d1d84292dfbad38febc97a02602980"
 let corePackageName = "core"
 // END KMMBRIDGE BLOCK FOR 'core'
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'auth' (do not edit)
-let remoteauthUrl =
-    "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248055341.zip"
-let remoteauthChecksum = "d9d0df846194d3da63e65cb7d21deca406728d6431b4dc1322f97f3d1b012435"
+let remoteauthUrl = "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248064771.zip"
+let remoteauthChecksum = "44b68998fcc5b623fe1cb57eb89681955273b12eec0d9e725d62bdeea7dc0f29"
 let authPackageName = "auth"
 // END KMMBRIDGE BLOCK FOR 'auth'
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'user' (do not edit)
-let remoteuserUrl =
-    "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248055341.zip"
-let remoteuserChecksum = "d9d0df846194d3da63e65cb7d21deca406728d6431b4dc1322f97f3d1b012435"
+let remoteuserUrl = "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248065023.zip"
+let remoteuserChecksum = "da95a22b7ba9a08653919cc59b0ad522038ebf902fcefd16fbf8b5ddfca0819b"
 let userPackageName = "user"
 // END KMMBRIDGE BLOCK FOR 'user'
 
