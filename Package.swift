@@ -1,24 +1,47 @@
 // swift-tools-version:5.8
 import PackageDescription
 
-let packageName = "allshared"
+let corePackageName = "core"
+let authPackageName = "auth"
+let userPackageName = "user"
 
 let package = Package(
-    name: packageName,
+    name: "Test",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v13)
     ],
     products: [
         .library(
-            name: packageName,
-            targets: [packageName]
+            name: corePackageName,
+            targets: [corePackageName]
+        ),
+        .library(
+            name: authPackageName,
+            targets: [authPackageName]
+        ),
+        .library(
+            name: userPackageName,
+            targets: [userPackageName]
+        ),
+        .library(
+            name: "Test",
+            targets: [corePackageName, authPackageName, userPackageName]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: packageName,
-            path: "./allshared/build/XCFrameworks/debug/\(packageName).xcframework"
-        )
-        ,
+            name: corePackageName,
+            path: "./core/build/XCFrameworks/debug/\(corePackageName).xcframework"
+        ),
+        .binaryTarget(
+            name: authPackageName,
+            path: "./auth/build/XCFrameworks/debug/\(authPackageName).xcframework",
+            dependencies: [corePackageName]
+        ),
+        .binaryTarget(
+            name: userPackageName,
+            path: "./user/build/XCFrameworks/debug/\(userPackageName).xcframework",
+            dependencies: [corePackageName]
+        ),
     ]
 )

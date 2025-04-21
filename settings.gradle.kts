@@ -16,4 +16,4 @@ dependencyResolutionManagement {
     }
 }
 
-include("breeds", "analytics", "allshared", ":testapps:android")
+include("core", "auth", "user")

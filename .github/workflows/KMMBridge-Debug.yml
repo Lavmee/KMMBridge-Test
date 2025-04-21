@@ -8,3 +8,4 @@ jobs:
     uses: ./.github/workflows/Base-Publish.yml
     with:
       build-debug: true
+      publish-tasks: "kmmBridgePublish"
