@@ -22,7 +22,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":core"))
+            implementation(project(":core"))
         }
     }
 }
