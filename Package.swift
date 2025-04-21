@@ -42,14 +42,12 @@ let package = Package(
         .binaryTarget(
             name: authPackageName,
             url: remoteauthUrl,
-            checksum: remoteauthChecksum,
-            dependencies: [corePackageName]
+            checksum: remoteauthChecksum
         ),
         .binaryTarget(
             name: userPackageName,
             url: remoteuserUrl,
-            checksum: remoteuserChecksum,
-            dependencies: [corePackageName]
+            checksum: remoteuserChecksum
         ),
     ]
 )
