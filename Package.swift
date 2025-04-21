@@ -1,47 +1,29 @@
 // swift-tools-version:5.8
 import PackageDescription
 
-let corePackageName = "core"
-let authPackageName = "auth"
-let userPackageName = "user"
+// BEGIN KMMBRIDGE VARIABLES BLOCK (do not edit)
+let remoteKotlinUrl = "https://api.github.com/repos/Lavmee/KMMBridge-Test/releases/assets/248045406.zip"
+let remoteKotlinChecksum = "99fbca4355fbc705190c64d7fd500ca28c7e4e86666fd0a302c16ca0bcae698c"
+let packageName = "user"
+// END KMMBRIDGE BLOCK
 
 let package = Package(
-    name: "Test",
+    name: packageName,
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: corePackageName,
-            targets: [corePackageName]
-        ),
-        .library(
-            name: authPackageName,
-            targets: [authPackageName]
-        ),
-        .library(
-            name: userPackageName,
-            targets: [userPackageName]
-        ),
-        .library(
-            name: "Test",
-            targets: [corePackageName, authPackageName, userPackageName]
+            name: packageName,
+            targets: [packageName]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: corePackageName,
-            path: "./core/build/XCFrameworks/debug/\(corePackageName).xcframework"
-        ),
-        .binaryTarget(
-            name: authPackageName,
-            path: "./auth/build/XCFrameworks/debug/\(authPackageName).xcframework",
-            dependencies: [corePackageName]
-        ),
-        .binaryTarget(
-            name: userPackageName,
-            path: "./user/build/XCFrameworks/debug/\(userPackageName).xcframework",
-            dependencies: [corePackageName]
-        ),
+            name: packageName,
+            url: remoteKotlinUrl,
+            checksum: remoteKotlinChecksum
+        )
+        ,
     ]
 )
