@@ -40,10 +40,6 @@ let package = Package(
             name: userPackageName,
             targets: [userPackageName]
         ),
-        .library(
-            name: "Test",
-            targets: [corePackageName, authPackageName, userPackageName]
-        ),
     ],
     targets: [
         .binaryTarget(
