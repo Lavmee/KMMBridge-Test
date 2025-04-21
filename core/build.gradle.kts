@@ -38,7 +38,7 @@ android {
 kmmbridge {
     gitHubReleaseArtifacts()
     spm(
-        perModuleVariablesBlock = true,
+        useCustomPackageFile = true,
         swiftToolVersion = "5.8",
     ) {
         iOS { v("13") }
