@@ -23,22 +23,14 @@ let userPackageName = "user"
 // END KMMBRIDGE BLOCK FOR 'user'
 
 let package = Package(
-    name: "Test",
+    name: corePackageName,
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
             name: corePackageName,
-            targets: [corePackageName]
-        ),
-        .library(
-            name: authPackageName,
-            targets: [authPackageName]
-        ),
-        .library(
-            name: userPackageName,
-            targets: [userPackageName]
+            targets: [corePackageName, authPackageName, userPackageName]
         ),
     ],
     targets: [
